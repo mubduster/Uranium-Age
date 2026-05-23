@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "uranium-age:block/uranium_block"
+  }
+}

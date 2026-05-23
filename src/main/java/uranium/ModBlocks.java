@@ -42,34 +42,41 @@ public class ModBlocks {
     //create block
     public static final Block URANIUM_BLOCK = register(
             "uranium_block",
-            Block::new,
+            UraniumBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.COPPER)
+                    .randomTicks()
                     .strength(2.0f, 8f),
+            true
+    );
+    public static final Block RAW_URANIUM_BLOCK = register(
+            "raw_uranium_block",
+            RawUraniumBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.IRON)
+                    .strength(1.7f, 8f)
+                    .randomTicks()
+                    .lightLevel(state -> 12),
             true
     );
     public static final Block URANIUM_ORE = register(
             "uranium_ore",
-            Block::new,
+            UraniumOreBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.STONE)
+                    .strength(1.5f, 6f)
+                    .requiresCorrectToolForDrops()
+                    .randomTicks()
                     .lightLevel(state -> 6),
             true
     );
     public static final Block TARNISHED_URANIUM_BLOCK = register(
             "tarnished_uranium_block",
-            Block::new,
+            TarnishedUraniumBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.CALCITE)
+                    .randomTicks()
                     .strength(1.3f, 4.0f),
-            true
-    );
-    public static final Block YELLOW_CAKE_URANIUM_BLOCK = register(
-            "yellow_cake_uranium_block",
-            Block::new,
-            BlockBehaviour.Properties.of()
-                    .sound(SoundType.BASALT)
-                    .strength(0.8f, 2.0f),
             true
     );
 
@@ -77,10 +84,10 @@ public class ModBlocks {
     //Add item to inventory and initialize the file
     public static void initialize() {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(ModBlocks.RAW_URANIUM_BLOCK.asItem());
+            creativeTab.accept(ModBlocks.URANIUM_ORE.asItem());
             creativeTab.accept(ModBlocks.URANIUM_BLOCK.asItem());
             creativeTab.accept(ModBlocks.TARNISHED_URANIUM_BLOCK.asItem());
-            creativeTab.accept(ModBlocks.YELLOW_CAKE_URANIUM_BLOCK.asItem());
-            creativeTab.accept(ModBlocks.URANIUM_ORE.asItem());
         });
     }
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "uranium-age:block/raw_uranium_block"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "boron",
+  "show_notification": true,
+  "ingredients": [
+    "uranium-age:boron_ingot",
+    "uranium-age:boron_ingot",
+    "uranium-age:boron_ingot"
+  ],
+  "result": {
+    "count": 3,
+    "id": "uranium-age:boron_rod"
+  }
+}

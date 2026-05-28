@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "uranium",
+  "show_notification": true,
+  "key": {
+    "A": "uranium-age:raw_uranium"
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:raw_uranium_block"
+  }
+}

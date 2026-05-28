@@ -1,0 +1,4 @@
+{
+  "replace": false,
+  "values": ["uranium-age:uranium_ore","uranium-age:uranium_block","uranium-age:raw_uranium_block","uranium-age:tarnished_uranium_block","uranium-age:deepslate_uranium_ore","uranium-age:boron_ore","uranium-age:deepslate_boron_ore","uranium-age:boron_block"]
+}

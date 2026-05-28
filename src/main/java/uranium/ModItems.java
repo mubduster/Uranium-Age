@@ -1,15 +1,19 @@
 package uranium;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
+import javax.swing.*;
 import java.util.function.Function;
 
 public class ModItems {
@@ -33,12 +37,40 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
+    public static final Item BORON_INGOT = register(
+            "boron_ingot",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item BORON_ROD = register(
+            "boron_rod",
+            Item::new,
+            new Item.Properties()
+    );
 
+    public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
+            BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, "creative_tab")
+    );
+    public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricCreativeModeTab.builder()
+            .icon(() -> new ItemStack(ModItems.RAW_URANIUM))
+            .title(Component.translatable("creativeTab.uranium-age"))
+            .displayItems((prams, output) -> {
+                output.accept(ModBlocks.URANIUM_ORE);
+                output.accept(ModBlocks.DEEPSLATE_URANIUM_ORE);
+                output.accept(ModItems.RAW_URANIUM);
+                output.accept(ModBlocks.RAW_URANIUM_BLOCK);
+                output.accept(ModItems.URANIUM_INGOT);
+                output.accept(ModBlocks.URANIUM_BLOCK);
+                output.accept(ModBlocks.TARNISHED_URANIUM_BLOCK);
+                output.accept(ModBlocks.BORON_ORE);
+                output.accept(ModBlocks.DEEPSLATE_BORON_ORE);
+                output.accept(ModItems.BORON_INGOT);
+                output.accept(ModBlocks.BORON_BLOCK);
+                output.accept(ModItems.BORON_ROD);
+            })
+            .build();
 
     public static void initialize(){
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> {
-            creativeTab.accept(ModItems.RAW_URANIUM);
-            creativeTab.accept(ModItems.URANIUM_INGOT);
-        });
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
     }
 }

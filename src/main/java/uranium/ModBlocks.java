@@ -70,24 +70,56 @@ public class ModBlocks {
                     .lightLevel(state -> 6),
             true
     );
+    public static final Block DEEPSLATE_URANIUM_ORE = register(
+            "deepslate_uranium_ore",
+            UraniumOreBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.DEEPSLATE)
+                    .strength(1.7f, 6.2f)
+                    .requiresCorrectToolForDrops()
+                    .randomTicks()
+                    .lightLevel(state -> 6),
+            true
+    );
     public static final Block TARNISHED_URANIUM_BLOCK = register(
             "tarnished_uranium_block",
             TarnishedUraniumBlock::new,
             BlockBehaviour.Properties.of()
                     .sound(SoundType.CALCITE)
                     .randomTicks()
+                    .requiresCorrectToolForDrops()
                     .strength(1.3f, 4.0f),
+            true
+    );
+    public static final Block BORON_ORE = register(
+            "boron_ore",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5f, 6f),
+            true
+    );
+    public static final Block DEEPSLATE_BORON_ORE = register(
+            "deepslate_boron_ore",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.7f, 6.2f),
+            true
+    );
+    public static final Block BORON_BLOCK = register(
+            "boron_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.4f, 5.5f),
             true
     );
 
     //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //Add item to inventory and initialize the file
-    public static void initialize() {
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
-            creativeTab.accept(ModBlocks.RAW_URANIUM_BLOCK.asItem());
-            creativeTab.accept(ModBlocks.URANIUM_ORE.asItem());
-            creativeTab.accept(ModBlocks.URANIUM_BLOCK.asItem());
-            creativeTab.accept(ModBlocks.TARNISHED_URANIUM_BLOCK.asItem());
-        });
-    }
+    public static void initialize() {}
 }

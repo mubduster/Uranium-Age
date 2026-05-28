@@ -1,8 +1,15 @@
 {
   "block.uranium-age.uranium_ore": "Uranium Ore",
+  "block.uranium-age.deepslate_uranium_ore": "Deepslate Uranium Ore",
   "block.uranium-age.raw_uranium_block": "Raw Uranium Block",
   "block.uranium-age.uranium_block": "Uranium Block",
   "block.uranium-age.tarnished_uranium_block": "Tarnished Uranium Block",
+  "block.uranium-age.boron_block": "Boron Block",
+  "block.uranium-age.boron_ore": "Boron Ore",
+  "block.uranium-age.deepslate_boron_ore": "Deepslate Boron Ore",
   "item.uranium-age.raw_uranium": "Raw Uranium",
-  "item.uranium-age.uranium_ingot": "Uranium Ingot"
+  "item.uranium-age.uranium_ingot": "Uranium Ingot",
+  "item.uranium-age.boron_ingot": "Boron Ingot",
+  "item.uranium-age.boron_rod": "Boron Rod",
+  "creativeTab.uranium-age": "Uranium Age"
 }

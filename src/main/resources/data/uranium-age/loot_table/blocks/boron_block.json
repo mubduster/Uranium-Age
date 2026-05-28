@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "uranium-age:raw_uranium"
+          "name": "uranium-age:boron_block"
         }
       ],
       "conditions": [

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "uranium",
+  "show_notification": true,
+  "ingredients": [
+    "uranium-age:raw_uranium_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "uranium-age:raw_uranium"
+  }
+}

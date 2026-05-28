@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "group": "uranium",
+  "cooking_time": 100,
+  "experience": 3.5,
+  "ingredient": ["uranium-age:uranium_ore","uranium-age:deepslate_uranium_ore"],
+  "result": {
+    "id": "uranium-age:raw_uranium"
+  }
+}

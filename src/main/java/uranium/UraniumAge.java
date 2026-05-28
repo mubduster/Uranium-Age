@@ -2,6 +2,9 @@ package uranium;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +23,17 @@ public class UraniumAge implements ModInitializer {
 		// Proceed with mild caution.
 		ModBlocks.initialize();
 		ModItems.initialize();
+		ModWorldGen.initialize();
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInOverworld(),
+				GenerationStep.Decoration.UNDERGROUND_ORES,
+				ModWorldGen.URANIUM_CAVE_BLOCK_PLACED_KEY
+		);
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInOverworld(),
+				GenerationStep.Decoration.UNDERGROUND_ORES,
+				ModWorldGen.BORON_CAVE_BLOCK_PLACED_KEY
+		);
 		LOGGER.info("Hello Fabric world!");
 	}
 }

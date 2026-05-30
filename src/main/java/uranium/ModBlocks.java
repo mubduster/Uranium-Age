@@ -42,7 +42,7 @@ public class ModBlocks {
     //create block
     public static final Block URANIUM_BLOCK = register(
             "uranium_block",
-            UraniumBlock::new,
+            properties -> new UraniumBlock(UraniumState.FRESH, properties),
             BlockBehaviour.Properties.of()
                     .sound(SoundType.COPPER)
                     .randomTicks()
@@ -51,7 +51,7 @@ public class ModBlocks {
     );
     public static final Block RAW_URANIUM_BLOCK = register(
             "raw_uranium_block",
-            RawUraniumBlock::new,
+            properties -> new UraniumBlock(UraniumState.TARNISHED, properties),
             BlockBehaviour.Properties.of()
                     .sound(SoundType.IRON)
                     .strength(1.7f, 8f)

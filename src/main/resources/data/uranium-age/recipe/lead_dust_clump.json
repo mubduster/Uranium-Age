@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "lead",
+  "show_notification": true,
+  "ingredients": [
+    "uranium-age:lead_dust","uranium-age:lead_dust","uranium-age:lead_dust","uranium-age:lead_dust"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:lead_dust_clump"
+  }
+}

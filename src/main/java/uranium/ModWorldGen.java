@@ -14,5 +14,9 @@ public class ModWorldGen {
             Registries.PLACED_FEATURE,
             Identifier.fromNamespaceAndPath("uranium-age", "boron_cave_block_placed")
     );
+    public static final ResourceKey<PlacedFeature> LEAD_CAVE_BLOCK_PLACED_KEY = ResourceKey.create(
+            Registries.PLACED_FEATURE,
+            Identifier.fromNamespaceAndPath("uranium-age", "lead_cave_block_placed")
+    );
     public static void initialize() {}
 }

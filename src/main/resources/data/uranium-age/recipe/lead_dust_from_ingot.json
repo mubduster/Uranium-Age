@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "lead",
+  "show_notification": true,
+  "ingredients": [
+    "uranium-age:lead_ingot"
+  ],
+  "result": {
+    "count": 4,
+    "id": "uranium-age:lead_dust"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "group": "lead",
+  "cooking_time": 115,
+  "experience": 5,
+  "ingredient": ["uranium-age:lead_dust_clump"],
+  "result": {
+    "id": "uranium-age:lead_ingot"
+  }
+}

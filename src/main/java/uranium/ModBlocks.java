@@ -118,6 +118,33 @@ public class ModBlocks {
                     .strength(1.4f, 5.5f),
             true
     );
+    public static final Block LEAD_ORE = register(
+            "lead_ore",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5f, 6f),
+            true
+    );
+    public static final Block DEEPSLATE_LEAD_ORE = register(
+            "deepslate_lead_ore",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.DEEPSLATE)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.7f, 6.2f),
+            true
+    );
+    public static final Block LEAD_BLOCK = register(
+            "lead_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.BASALT)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.56f, 5.9f),
+            true
+    );
 
     //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //Add item to inventory and initialize the file

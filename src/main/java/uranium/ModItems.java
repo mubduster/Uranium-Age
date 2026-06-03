@@ -47,6 +47,21 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
+    public static final Item LEAD_DUST = register(
+            "lead_dust",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item LEAD_DUST_CLUMP = register(
+            "lead_dust_clump",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item LEAD_INGOT = register(
+            "lead_ingot",
+            Item::new,
+            new Item.Properties()
+    );
 
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, "creative_tab")
@@ -67,6 +82,12 @@ public class ModItems {
                 output.accept(ModItems.BORON_INGOT);
                 output.accept(ModBlocks.BORON_BLOCK);
                 output.accept(ModItems.BORON_ROD);
+                output.accept(ModItems.LEAD_DUST);
+                output.accept(ModItems.LEAD_DUST_CLUMP);
+                output.accept(ModItems.LEAD_INGOT);
+                output.accept(ModBlocks.LEAD_ORE);
+                output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
+                output.accept(ModBlocks.LEAD_BLOCK);
             })
             .build();
 

@@ -6,6 +6,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -36,7 +37,7 @@ public class UraniumBlock extends Block {
 
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random){
-        if ( random.nextFloat() < 0.05688f){
+        if ( random.nextFloat() < 0.04688f){
             this.tryDegrade(state, level, pos, random);
         }
     }
@@ -99,7 +100,7 @@ public class UraniumBlock extends Block {
             boolean eastBlocked = level.getBlockState(pos.east()).is(ModBlocks.LEAD_BLOCK);
             boolean westBlocked = level.getBlockState(pos.west()).is(ModBlocks.LEAD_BLOCK);
             boolean aboveBlocked = level.getBlockState(pos.above()).is(ModBlocks.LEAD_BLOCK);
-            boolean bellowBlocked = level.getBlockState(pos.below()).is(ModBlocks.LEAD_BLOCK);
+            boolean belowBlocked = level.getBlockState(pos.below()).is(ModBlocks.LEAD_BLOCK);
 
 
             for (LivingEntity entity : targets){
@@ -112,6 +113,11 @@ public class UraniumBlock extends Block {
                 double absZ = Math.abs(diffZ);
 
                 boolean isProtected = false;
+
+                boolean isWearingLeadArmor = false;
+                if (entity.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.LEAD_HELMET) && entity.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.LEAD_CHESTPLATE) && entity.getItemBySlot(EquipmentSlot.LEGS).is(ModItems.LEAD_LEGGINGS) && entity.getItemBySlot(EquipmentSlot.FEET).is(ModItems.LEAD_BOOTS)){
+                    isWearingLeadArmor = true;
+                }
 
                 if (absY >= absX && absY >= absZ) {
                     if (diffY > 0 && aboveBlocked) isProtected = true;
@@ -126,7 +132,7 @@ public class UraniumBlock extends Block {
                     else if (diffZ > 0 && southBlocked) isProtected = true;
                 }
 
-                if (!isProtected){
+                if (!isProtected && !isWearingLeadArmor){
                     entity.addEffect(new MobEffectInstance(
                             MobEffects.POISON,
                             50,

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "uranium-age:lead_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "uranium-age:lead_armor"
+      }
+    ]
+  }
+}

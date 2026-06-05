@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import javax.swing.*;
 import java.util.function.Function;
@@ -37,6 +38,7 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
+
     public static final Item BORON_INGOT = register(
             "boron_ingot",
             Item::new,
@@ -47,6 +49,7 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
+
     public static final Item LEAD_DUST = register(
             "lead_dust",
             Item::new,
@@ -61,6 +64,30 @@ public class ModItems {
             "lead_ingot",
             Item::new,
             new Item.Properties()
+    );
+    public static final Item LEAD_HELMET = register(
+            "lead_helmet",
+            Item::new,
+            new Item.Properties().humanoidArmor(LeadArmorMaterial.INSTANCE, ArmorType.HELMET)
+                    .durability(ArmorType.HELMET.getDurability(LeadArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item LEAD_CHESTPLATE = register(
+            "lead_chestplate",
+            Item::new,
+            new Item.Properties().humanoidArmor(LeadArmorMaterial.INSTANCE, ArmorType.CHESTPLATE)
+                    .durability(ArmorType.CHESTPLATE.getDurability(LeadArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item LEAD_LEGGINGS = register(
+            "lead_leggings",
+            Item::new,
+            new Item.Properties().humanoidArmor(LeadArmorMaterial.INSTANCE, ArmorType.LEGGINGS)
+                    .durability(ArmorType.LEGGINGS.getDurability(LeadArmorMaterial.BASE_DURABILITY))
+    );
+    public static final Item LEAD_BOOTS = register(
+            "lead_boots",
+            Item::new,
+            new Item.Properties().humanoidArmor(LeadArmorMaterial.INSTANCE, ArmorType.BOOTS)
+                    .durability(ArmorType.BOOTS.getDurability(LeadArmorMaterial.BASE_DURABILITY))
     );
 
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
@@ -88,6 +115,10 @@ public class ModItems {
                 output.accept(ModBlocks.LEAD_ORE);
                 output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
                 output.accept(ModBlocks.LEAD_BLOCK);
+                output.accept(ModItems.LEAD_HELMET);
+                output.accept(ModItems.LEAD_CHESTPLATE);
+                output.accept(ModItems.LEAD_LEGGINGS);
+                output.accept(ModItems.LEAD_BOOTS);
             })
             .build();
 

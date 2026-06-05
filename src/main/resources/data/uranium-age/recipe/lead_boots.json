@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "lead",
+  "show_notification": true,
+  "key": {
+    "A": "uranium-age:lead_ingot",
+    "B": "minecraft:copper_boots"
+  },
+  "pattern": [
+    "   ",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:lead_boots"
+  }
+}

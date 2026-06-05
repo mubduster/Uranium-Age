@@ -5,6 +5,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.Level;
@@ -59,6 +60,11 @@ public class RawUraniumBlock extends Block {
 
                 boolean isProtected = false;
 
+                boolean isWearingLeadArmor = false;
+                if (entity.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.LEAD_HELMET) && entity.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.LEAD_CHESTPLATE) && entity.getItemBySlot(EquipmentSlot.LEGS).is(ModItems.LEAD_LEGGINGS) && entity.getItemBySlot(EquipmentSlot.FEET).is(ModItems.LEAD_BOOTS)){
+                    isWearingLeadArmor = true;
+                }
+
                 if (absY >= absX && absY >= absZ) {
                     if (diffY > 0 && aboveBlocked) isProtected = true;
                     else if (diffY < 0 && belowBlocked) isProtected = true;
@@ -72,7 +78,7 @@ public class RawUraniumBlock extends Block {
                     else if (diffZ > 0 && southBlocked) isProtected = true;
                 }
 
-                if (!isProtected) {
+                if (!isProtected && !isWearingLeadArmor) {
                     entity.addEffect(new MobEffectInstance(
                             MobEffects.POISON,
                             50,

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "reactor",
+  "show_notification": true,
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "B": "minecraft:water_bucket"
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:reactor_boiler_small"
+  }
+}

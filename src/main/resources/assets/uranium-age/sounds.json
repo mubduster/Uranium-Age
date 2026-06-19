@@ -1,0 +1,6 @@
+{
+  "reactor_hum": {
+    "subtitle": "subtitle.uranium-age.reactor_hum",
+    "sounds": ["uranium-age:reactor_hum"]
+  }
+}

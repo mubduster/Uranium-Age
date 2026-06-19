@@ -3,7 +3,8 @@
 	"package": "uranium.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"AbstractFurnaceBlockEntityMixin",
+        "AbstractFurnaceBlockEntityAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

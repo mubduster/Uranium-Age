@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "reactor",
+  "show_notification": true,
+  "key": {
+    "A": "minecraft:redstone",
+    "B": "minecraft:sticky_piston",
+    "C": "minecraft:iron_ingot",
+    "D": "minecraft:observer"
+  },
+  "pattern": [
+    "CDC",
+    "CBC",
+    "CAC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:reactor_block_controls"
+  }
+}

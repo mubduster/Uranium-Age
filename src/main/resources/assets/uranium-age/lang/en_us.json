@@ -10,6 +10,7 @@
   "block.uranium-age.lead_ore": "Lead Ore",
   "block.uranium-age.deepslate_lead_ore": "Deepslate Lead Ore",
   "block.uranium-age.lead_block": "Lead Block",
+  "block.uranium-age.reactor_block": "Reactor",
   "item.uranium-age.raw_uranium": "Raw Uranium",
   "item.uranium-age.uranium_ingot": "Uranium Ingot",
   "item.uranium-age.boron_ingot": "Boron Ingot",
@@ -21,5 +22,16 @@
   "item.uranium-age.lead_chestplate": "Lead Chestplate",
   "item.uranium-age.lead_leggings": "Lead Leggings",
   "item.uranium-age.lead_boots": "Lead Boots",
-  "creativeTab.uranium-age": "Uranium Age"
+  "item.uranium-age.portable_uranium_reactor": "Portable Uranium Reactor",
+  "item.uranium-age.portable_uranium_block_reactor": "Portable Uranium Block Reactor",
+  "item.uranium-age.portable_reactor_body": "Portable Reactor Body",
+  "item.uranium-age.reactor_block_outer_concrete_body": "Reactor Block Outer Concrete Body",
+  "item.uranium-age.reactor_bock_body": "Reactor Block Body",
+  "item.uranium-age.reactor_block_controls": "Reactor Block Controls",
+  "item.uranium-age.reactor_core_small": "Reactor Core Small",
+  "item.uranium-age.reactor_core_large": "Reactor Core Large",
+  "item.uranium-age.reactor_boiler_small": "Reactor Boiler Small",
+  "item.uranium-age.reactor_boiler_large": "Reactor Boiler Large",
+  "creativeTab.uranium-age": "Uranium Age",
+  "subtitle.uranium-age.reactor_hum": "Reactor Hum"
 }

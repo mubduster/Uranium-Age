@@ -1,7 +1,7 @@
 package uranium;
 
-import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -9,12 +9,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.ArmorType;
 
-import javax.swing.*;
 import java.util.function.Function;
 
 public class ModItems {
@@ -90,6 +88,57 @@ public class ModItems {
                     .durability(ArmorType.BOOTS.getDurability(LeadArmorMaterial.BASE_DURABILITY))
     );
 
+    public static final Item PORTABLE_URANIUM_REACTOR = register(
+            "portable_uranium_reactor",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item PORTABLE_URANIUM_BLOCK_REACTOR = register(
+            "portable_uranium_block_reactor",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item PORTABLE_REACTOR_BODY = register(
+            "portable_reactor_body",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_BLOCK_OUTER_CONCRETE_BODY = register(
+            "reactor_block_outer_concrete_body",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_BLOCK_BODY = register(
+            "reactor_block_body",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_BLOCK_CONTROLS = register(
+            "reactor_block_controls",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_CORE_SMALL = register(
+            "reactor_core_small",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_CORE_LARGE = register(
+            "reactor_core_large",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_BOILER_SMALL = register(
+            "reactor_boiler_small",
+            Item::new,
+            new Item.Properties()
+    );
+    public static final Item REACTOR_BOILER_LARGE =register(
+            "reactor_boiler_large",
+            Item::new,
+            new Item.Properties()
+    );
+
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, "creative_tab")
     );
@@ -119,10 +168,26 @@ public class ModItems {
                 output.accept(ModItems.LEAD_CHESTPLATE);
                 output.accept(ModItems.LEAD_LEGGINGS);
                 output.accept(ModItems.LEAD_BOOTS);
+                output.accept(ModItems.PORTABLE_URANIUM_REACTOR);
+                output.accept(ModItems.PORTABLE_URANIUM_BLOCK_REACTOR);
+                output.accept(ModBlocks.REACTOR_BLOCK);
+                output.accept(ModItems.PORTABLE_REACTOR_BODY);
+                output.accept(ModItems.REACTOR_BLOCK_OUTER_CONCRETE_BODY);
+                output.accept(ModItems.REACTOR_BLOCK_BODY);
+                output.accept(ModItems.REACTOR_CORE_SMALL);
+                output.accept(ModItems.REACTOR_CORE_LARGE);
+                output.accept(ModItems.REACTOR_BOILER_SMALL);
+                output.accept(ModItems.REACTOR_BOILER_LARGE);
             })
             .build();
 
     public static void initialize(){
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
+
+        FuelValueEvents.BUILD.register((builder, context) -> {
+            builder.add(ModItems.PORTABLE_URANIUM_REACTOR, 500 * 20);
+            builder.add(ModItems.PORTABLE_URANIUM_BLOCK_REACTOR, 1400 * 20);
+        });
+
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "reactor",
+  "show_notification": true,
+  "key": {
+    "A": "uranium-age:uranium_block",
+    "B": "uranium-age:boron_rod"
+  },
+  "pattern": [
+    "BAB",
+    "ABA",
+    "BAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uranium-age:reactor_core_large"
+  }
+}

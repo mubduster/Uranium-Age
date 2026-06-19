@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "reactor",
+  "show_notification": true,
+  "ingredients": [
+    "uranium-age:portable_reactor_body",
+    "uranium-age:reactor_boiler_small",
+    "uranium-age:reactor_core_large"
+  ],
+  "result": {
+    "count": 9,
+    "id": "uranium-age:portable_uranium_block_reactor"
+  }
+}

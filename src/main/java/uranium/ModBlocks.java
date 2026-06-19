@@ -1,15 +1,11 @@
 package uranium;
 
-import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
-import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTabOutput;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -146,7 +142,16 @@ public class ModBlocks {
             true
     );
 
+    public static final Block REACTOR_BLOCK = register(
+            "reactor_block",
+            ReactorBlock::new,
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.IRON)
+                    .lightLevel(state -> state.getValue(ReactorBlock.GLOWING) ? 12 : 0)
+                    .strength(1.7f, 7.5f),
+            true
+    );
     //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    //Add item to inventory and initialize the file
+
     public static void initialize() {}
 }

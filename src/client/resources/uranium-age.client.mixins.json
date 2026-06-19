@@ -3,7 +3,8 @@
 	"package": "uranium.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"ExampleClientMixin"
+		"ExampleClientMixin",
+		"GuiAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

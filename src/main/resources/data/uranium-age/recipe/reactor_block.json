@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "group": "reactor",
-  "show_notification": "true",
+  "show_notification": true,
   "key": {
     "A": "uranium-age:reactor_block_body",
     "B": "uranium-age:reactor_boiler_large",
-    "C": "uranium-age:reactor_controls",
+    "C": "uranium-age:reactor_block_controls",
     "D": "uranium-age:reactor_block_outer_concrete_body",
     "E": "minecraft:iron_ingot"
   },

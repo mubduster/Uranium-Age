@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "uranium-age:item/reactor_boiler_small"
+  }
+}

@@ -17,15 +17,15 @@ import java.util.function.Function;
 
 public class ModItems {
     public static <T extends Item>T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
-     ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, name));
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, name));
 
-     T item = itemFactory.apply(settings.setId(itemKey));
+        T item = itemFactory.apply(settings.setId(itemKey));
 
-     Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+        Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
-     return item;
+        return item;
     }
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
     public static final Item URANIUM_INGOT = register(
             "uranium_ingot",
             Item::new,
@@ -138,7 +138,9 @@ public class ModItems {
             Item::new,
             new Item.Properties()
     );
+//---------------------------------------------------------------------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(UraniumAge.MOD_ID, "creative_tab")
     );
@@ -171,6 +173,7 @@ public class ModItems {
                 output.accept(ModItems.PORTABLE_URANIUM_REACTOR);
                 output.accept(ModItems.PORTABLE_URANIUM_BLOCK_REACTOR);
                 output.accept(ModBlocks.REACTOR_BLOCK);
+                output.accept(ModItems.REACTOR_BLOCK_CONTROLS);
                 output.accept(ModItems.PORTABLE_REACTOR_BODY);
                 output.accept(ModItems.REACTOR_BLOCK_OUTER_CONCRETE_BODY);
                 output.accept(ModItems.REACTOR_BLOCK_BODY);
@@ -180,6 +183,7 @@ public class ModItems {
                 output.accept(ModItems.REACTOR_BOILER_LARGE);
             })
             .build();
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public static void initialize(){
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);

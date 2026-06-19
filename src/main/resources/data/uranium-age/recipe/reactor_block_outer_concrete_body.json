@@ -4,11 +4,12 @@
   "group": "reactor",
   "show_notification": true,
   "key": {
-    "A": "minecraft:white_concrete"
+    "A": "minecraft:white_concrete",
+    "B": "minecraft:iron_ingot"
   },
   "pattern": [
     "AAA",
-    "A A",
+    "ABA",
     "AAA"
   ],
   "result": {

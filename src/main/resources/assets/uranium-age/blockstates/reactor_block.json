@@ -1,8 +1,23 @@
 {
   "variants": {
-    "active=false,glowing=false": {"model": "uranium-age:block/reactor_block_inactive"},
-    "active=true,glowing=false": {"model": "uranium-age:block/reactor_block_active"},
-    "active=false,glowing=true": {"model": "uranium-age:block/reactor_block_inactive"},
-    "active=true,glowing=true": {"model": "uranium-age:block/reactor_block_active_glowing"}
+    "active=false,glowing=false,facing=north": {"model": "uranium-age:block/reactor_inactive"},
+    "active=true,glowing=false,facing=north": {"model": "uranium-age:block/reactor_active"},
+    "active=false,glowing=true,facing=north": {"model": "uranium-age:block/reactor_inactive"},
+    "active=true,glowing=true,facing=north": {"model": "uranium-age:block/reactor_active_glowing"},
+
+    "active=false,glowing=false,facing=south": {"model": "uranium-age:block/reactor_inactive", "y": 180},
+    "active=true,glowing=false,facing=south": {"model": "uranium-age:block/reactor_active", "y": 180},
+    "active=false,glowing=true,facing=south": {"model": "uranium-age:block/reactor_inactive", "y": 180},
+    "active=true,glowing=true,facing=south": {"model": "uranium-age:block/reactor_active_glowing", "y": 180},
+
+    "active=false,glowing=false,facing=east": {"model": "uranium-age:block/reactor_inactive", "y": 90},
+    "active=true,glowing=false,facing=east": {"model": "uranium-age:block/reactor_active", "y": 90},
+    "active=false,glowing=true,facing=east": {"model": "uranium-age:block/reactor_inactive", "y": 90},
+    "active=true,glowing=true,facing=east": {"model": "uranium-age:block/reactor_active_glowing", "y": 90},
+
+    "active=false,glowing=false,facing=west": {"model": "uranium-age:block/reactor_inactive", "y": 270},
+    "active=true,glowing=false,facing=west": {"model": "uranium-age:block/reactor_active", "y": 270},
+    "active=false,glowing=true,facing=west": {"model": "uranium-age:block/reactor_inactive", "y":  270},
+    "active=true,glowing=true,facing=west": {"model": "uranium-age:block/reactor_active_glowing", "y":  270}
   }
 }

@@ -2,8 +2,10 @@ package uranium;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -12,7 +14,9 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
 
@@ -22,7 +26,8 @@ public class ReactorBlock extends BaseEntityBlock {
         super(settings);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(ACTIVE, false)
-                .setValue(GLOWING, false));
+                .setValue(GLOWING, false)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
@@ -45,10 +50,11 @@ public class ReactorBlock extends BaseEntityBlock {
 
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
     public static final BooleanProperty GLOWING = BooleanProperty.create("glowing");
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     @Override
     protected void createBlockStateDefinition (StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(ACTIVE, GLOWING);
+        builder.add(ACTIVE, GLOWING, FACING);
     }
 
     @Override
@@ -57,5 +63,10 @@ public class ReactorBlock extends BaseEntityBlock {
             return createTickerHelper(type, ModBlockEntities.Reactor_Block_Entity, ReactorBlockEntity::clientTick);
         }
         return createTickerHelper(type, ModBlockEntities.Reactor_Block_Entity, ReactorBlockEntity::tick);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(final BlockPlaceContext context){
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 }

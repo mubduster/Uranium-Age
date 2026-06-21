@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lead_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items" : "uranium-age:lead_ingot"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_lead_ingot"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:lead_dust_from_ingot",
+      "uranium-age:lead_block",
+      "uranium-age:lead_ingot_from_block",
+      "uranium-age:lead_helmet",
+      "uranium-age:lead_chestplate",
+      "uranium-age:lead_leggings",
+      "uranium-age:lead_boots"
+    ]
+  }
+}

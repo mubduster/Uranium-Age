@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
   "group": "boron_rod",
   "show_notification": true,
-  "ingredients": [
-    "uranium-age:boron_ingot",
-    "uranium-age:boron_ingot",
-    "uranium-age:boron_ingot"
+  "key": {
+    "A": "uranium-age:boron_ingot"
+  },
+  "pattern": [
+    "  A",
+    " A ",
+    "A  "
   ],
   "result": {
     "count": 3,

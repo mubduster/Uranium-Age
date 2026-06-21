@@ -41,17 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "uranium-age:lead_dust_from_ingot",
-      "uranium-age:lead_ingot",
-      "uranium-age:lead_ingot_blast",
-      "uranium-age:lead_dust",
-      "uranium-age:lead_dust_clump",
-      "uranium-age:lead_block",
-      "uranium-age:lead_ingot_from_block",
-      "uranium-age:lead_helmet",
-      "uranium-age:lead_chestplate",
-      "uranium-age:lead_leggings",
-      "uranium-age:lead_boots"
+      "uranium-age:lead_dust_clump"
     ]
   }
 }

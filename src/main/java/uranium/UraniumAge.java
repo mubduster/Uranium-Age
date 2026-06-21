@@ -15,6 +15,9 @@ import org.slf4j.LoggerFactory;
 
 import java.awt.*;
 
+//This mod's original author is Mubduster on github
+//
+
 public class UraniumAge implements ModInitializer {
 	public static final String MOD_ID = "uranium-age";
 

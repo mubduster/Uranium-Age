@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lead_dust_clump": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:lead_dust_clump"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_lead_dust_clump"]
+  ],
+  "rewards": {
+    "recipes": ["uranium-age:lead_ingot","uranium-age:lead_ingot_blast"]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "lead",
+  "category": "equipment",
+  "group": "lead_armor",
   "show_notification": true,
   "key": {
     "A": "uranium-age:lead_ingot",

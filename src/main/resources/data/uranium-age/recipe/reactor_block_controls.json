@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "reactor",
+  "category": "redstone",
+  "group": "reactor_block_controls",
   "show_notification": true,
   "key": {
     "A": "minecraft:redstone",

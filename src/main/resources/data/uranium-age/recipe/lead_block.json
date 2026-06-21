@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "lead",
+  "category": "building",
+  "group": "lead_block",
   "show_notification": true,
   "key": {
     "A": "uranium-age:lead_ingot"

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "lead",
+  "group": "lead_block",
   "ingredients": [
     "uranium-age:lead_block"
   ],

@@ -1,0 +1,55 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_boron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_ingot"}
+        ]
+      }
+    },
+    "has_boron_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_block"}
+        ]
+      }
+    },
+    "has_boron_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_rod"}
+        ]
+      }
+    },
+    "has_boron_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_ore"}
+        ]
+      }
+    },
+    "has_deepslate_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:deepslate_boron_ore"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_boron_ingot","has_boron_block","has_boron_rod","has_boron_ore","has_deepslate_ore"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:boron_ingot_from_block",
+      "uranium-age:boron_block",
+      "uranium-age:boron_rod"
+    ]
+  }
+}

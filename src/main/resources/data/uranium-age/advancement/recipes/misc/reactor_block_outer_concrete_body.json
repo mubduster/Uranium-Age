@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_concrete_white": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "minecraft:white_concrete"}
+        ]
+      }
+    },
+    "has_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "minecraft:iron_ingot"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_concrete_white","has_iron"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:reactor_block_outer_concrete_body"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "reactor",
+  "group": "reactor_core",
   "show_notification": true,
   "key": {
     "A": "uranium-age:uranium_ingot",

@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lead_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:lead_dust"}
+        ]
+      }
+    },
+    "has_lead_clump": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:lead_dust_clump"}
+        ]
+      }
+    },
+    "has_lead_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:lead_ingot"}
+        ]
+      }
+    },
+    "has_lead_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "uranium-age:lead_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_lead_dust","has_lead_clump","has_lead_ingot","has_lead_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:lead_dust_from_ingot",
+      "uranium-age:lead_ingot",
+      "uranium-age:lead_ingot_blast",
+      "uranium-age:lead_dust",
+      "uranium-age:lead_dust_clump",
+      "uranium-age:lead_block",
+      "uranium-age:lead_ingot_from_block",
+      "uranium-age:lead_helmet",
+      "uranium-age:lead_chestplate",
+      "uranium-age:lead_leggings",
+      "uranium-age:lead_boots"
+    ]
+  }
+}

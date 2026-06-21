@@ -7,6 +7,7 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
@@ -111,15 +112,19 @@ public class ReactorBlockEntity extends BlockEntity implements ImplementedContai
         boolean hadFuel = entity.fuelTime < 0;
 
         if (hasAll && entity.fuelTime == 0 && !currentlyActive){
-            ItemStack uraniumStack = entity.getItem(1);
-            entity.getItem(0).shrink(1);
-            entity.getItem(1).shrink(1);
-            entity.getItem(2).shrink(1);
-            entity.setChanged();
-            if (uraniumStack.is(ModItems.URANIUM_INGOT)){
-                entity.fuelTime = 900*20;
-            } else if (uraniumStack.getItem() instanceof BlockItem bi && bi.getBlock() == ModBlocks.URANIUM_BLOCK){
-                entity.fuelTime = 3600*20;
+            if (!entity.getItem(2).isEmpty()) {
+                ItemStack uraniumStack = entity.getItem(1);
+                entity.getItem(0).shrink(1);
+                entity.getItem(1).shrink(1);
+                entity.getItem(2).shrink(1);
+                entity.setChanged();
+                if (uraniumStack.is(ModItems.URANIUM_INGOT)) {
+                    entity.fuelTime = 900 * 20;
+                } else if (uraniumStack.getItem() instanceof BlockItem bi && bi.getBlock() == ModBlocks.URANIUM_BLOCK) {
+                    entity.fuelTime = 3600 * 20;
+                }
+            }else {
+                level.setBlock(pos, Blocks.LAVA.defaultBlockState(), Block.UPDATE_ALL);
             }
         }
 
@@ -130,8 +135,12 @@ public class ReactorBlockEntity extends BlockEntity implements ImplementedContai
         boolean isRunning = entity.fuelTime > 0;
 
         if (hadFuel && !isRunning){
-            entity.getItem(2).shrink(1);
-            entity.setChanged();
+            if (!entity.getItem(2).isEmpty()) {
+                entity.getItem(2).shrink(1);
+                entity.setChanged();
+            } else {
+                level.setBlock(pos, Blocks.LAVA.defaultBlockState(), Block.UPDATE_ALL);
+            }
         }
 
         boolean submerged = isRunning && Direction.stream()

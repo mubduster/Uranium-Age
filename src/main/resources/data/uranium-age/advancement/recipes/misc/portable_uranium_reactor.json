@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_boiler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:reactor_boiler_small"}
+        ]
+      }
+    },
+    "has_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:reactor_core_small"}
+        ]
+      }
+    },
+    "has_body": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:portable_reactor_body"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_boiler","has_core","has_body"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:portable_uranium_reactor"
+    ]
+  }
+}

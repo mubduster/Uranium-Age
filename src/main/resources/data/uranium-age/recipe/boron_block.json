@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "boron",
+  "category": "building",
+  "group": "boron_block",
   "show_notification": true,
   "key": {
     "A": "uranium-age:boron_ingot"

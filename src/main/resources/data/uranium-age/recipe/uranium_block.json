@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "group": "uranium",
+  "category": "building",
+  "group": "uranium_block",
   "show_notification": true,
   "key": {
     "A": "uranium-age:uranium_ingot"

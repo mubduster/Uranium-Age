@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria":{
+    "has_boiler": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:reactor_boiler_large"}
+        ]
+      }
+    },
+    "has_body": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:reactor_block_body"}
+        ]
+      }
+    },
+    "has_concrete_body":{
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:reactor_block_outer_concrete_body"}
+        ]
+      }
+    },
+    "has_controls": {
+    "trigger": "minecraft:inventory_changed",
+    "conditions": {
+      "items": [
+        { "items": "uranium-age:reactor_block_controls"}
+        ]
+      }
+    },
+    "has_uranium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:uranium_ingot"}
+        ]
+      }
+    },
+    "has_uranium_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:uranium_block"}
+        ]
+      }
+    },
+    "has_boron_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_rod"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_boiler","has_body","has_concrete_body","has_controls","has_uranium_ingot","has_uranium_block","has_boron_rod"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:reactor_block"
+    ]
+  }
+}

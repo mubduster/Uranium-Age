@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "reactor",
+  "group": "reactor_block",
   "show_notification": true,
   "key": {
     "A": "uranium-age:reactor_block_body",

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_uranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:uranium_ingot"}
+        ]
+      }
+    },
+    "has_boron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "uranium-age:boron_rod"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_uranium","has_boron"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:reactor_core_small"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "reactor",
+  "group": "reactor_block_body",
   "show_notification": true,
   "key": {
     "A": "minecraft:iron_block"

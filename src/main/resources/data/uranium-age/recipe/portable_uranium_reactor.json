@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "reactor",
+  "group": "portable_reactor_ingot",
   "show_notification": true,
   "ingredients": [
     "uranium-age:portable_reactor_body",

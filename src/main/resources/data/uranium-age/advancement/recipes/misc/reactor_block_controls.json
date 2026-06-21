@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "minecraft:redstone"}
+        ]
+      }
+    },
+    "has_piston": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "minecraft:sticky_piston"}
+        ]
+      }
+    },
+    "has_observer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "minecraft:observer"}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_redstone","has_piston","has_observer"]
+  ],
+  "rewards": {
+    "recipes": [
+      "uranium-age:reactor_block_controls"
+    ]
+  }
+}

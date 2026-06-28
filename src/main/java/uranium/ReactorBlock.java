@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
 
@@ -41,7 +42,7 @@ public class ReactorBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+    protected InteractionResult useWithoutItem(@NonNull BlockState blockState, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (!level.isClientSide() &&  level.getBlockEntity(pos) instanceof ReactorBlockEntity reactorBlock){
             player.openMenu(reactorBlock);
         }

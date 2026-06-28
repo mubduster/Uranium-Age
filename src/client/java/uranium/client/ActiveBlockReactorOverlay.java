@@ -33,6 +33,8 @@ public class ActiveBlockReactorOverlay implements BlockEntityRenderer<ReactorBlo
 
         BlockPos pos = entity.getBlockPos();
         BlockState reactorState = level.getBlockState(pos);
+        
+        if (!(reactorState.getBlock() instanceof ReactorBlock)) return;
 
         state.active = reactorState.getValue(ReactorBlock.ACTIVE);
         state.furnaceAbove = level.getBlockState(pos.above()).getBlock() instanceof AbstractFurnaceBlock;
